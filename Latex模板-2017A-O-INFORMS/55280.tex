@@ -1,0 +1,283 @@
+%%
+%% This is file `mcmthesis-demo.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% mcmthesis.dtx  (with options: `demo')
+%%
+%% -----------------------------------
+%%
+%% This is a generated file.
+%%
+%% Copyright (C)
+%%     2010 -- 2015 by Zhaoli Wang
+%%     2014 -- 2016 by Liam Huang
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is Liam Huang.
+%%
+\documentclass{mcmthesis}
+\mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
+        tcn = Hello, problem = A,
+        sheet = true, titleinsheet = true, keywordsinsheet = true,
+        titlepage = true}
+\usepackage{palatino}
+\usepackage{mwe}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\usepackage[ruled,lined,commentsnumbered]{algorithm2e}
+\usepackage{geometry}
+
+%% ADDED
+\usepackage{mathtools}
+\usepackage{setspace}
+
+
+
+\begin{document}
+\linespread{0.6} %%行间距
+\setlength{\parskip}{0.5\baselineskip} %%段间距
+
+\title{Novel Coronavirus Pneumonia: Aloha and to Say Aloha}
+
+\date{\today}
+	\begin{abstract}
+\hspace{1.2em}
+	Begin Abstract...
+		\begin{keywords}
+			Begin Keywords...
+		\end{keywords}
+	\end{abstract}
+
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+
+\section{Introduction}	\label{S1}
+
+\subsection{Problem Background}
+	Backgroud..
+
+\subsection{Our Work}
+	
+
+	The major logic flow is depicted as follows, in Figure \ref{fig:flow}:
+	
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{plots/flow_V1.jpg} %%% \textwidth 可以改图片大小
+    \caption{Major Logic Flow of our Model - ALOHA}
+    \label{fig:flow}
+    \end{figure}
+    %% Flow Chart %%%
+
+
+\section{Assumptions and Justifications}\label{S2}
+    We make some general assumptions to simplify our model. We will list all of the assumptions together with corresponding justification below:
+\begin{enumerate}[1)]
+	\item {\bfseries All of human beings are susceptible to NCP.} NCP was recently discovered and has gene specificity, which make it difficult to be immunized by the body. Thus, we can infer that human beings are susceptible to this virus without previous contact.
+	\item {\bfseries People will not get susceptible to secondary infection of NCP.} Depending on the nature of the body's immune system, after recovery most people will have better immune reaction to virus. We ignore the possibility of secondary infection to simplify our model.
+	\item {\bfseries Assume that incubation period to different individuals are the same.} Since incubation period of different host individual is different and also hard to predict, we assume that incubation periods are the same.
+	\item {\bfseries NCP will only complete the process of human-to-human transmission via close contact such as talking face-to-face.} We simplify our model here since people suffer a rather low  level of risk if they do not have close contact with the infected when it comes to NCP.
+	\item {\bfseries The number of infected people around the world is almost the number of infected people in China}. Although countries except China accounts for 71.57\% of the world population \small{(till August 28th, 2019, by United Nations \cite{pop_un})}, only less than  0.77\%of confirmed cases occurred outside China \small{(till February 3rd, 2020, by various organizations \cite{cov_who}\cite{cov_tencent}\cite{cov-jhu}\cite{cov-cdc}; with detailed information listed in Appendix)}. Meanwhile, after NCP was discovered in China, all the other countries took immediate action against the spread. Therefore, what deserves our attention is more the circumstances in China.
+\end{enumerate}
+
+
+\section{Notations and Definitions}\label{S3}
+    For convenience, we define a series of notations for mathematical usage, which are listed in Table \ref{notation} to describe our model.
+\begin{table}[h]\large
+    \centering
+    \caption{Notations mentioned in this paper}
+    \label{notation}
+    \begin{tabular}{c c}
+\toprule[2pt]
+        Symbol & Definition\\
+\hline
+    $S(t)$ & Number of susceptible person at time t\\
+    $E(t)$ & Number of enfective person at time t\\
+    $I(t)$ & Number of infectious person at time t\\
+    $R(t)$ & Number of removed person at time t\\
+    $t$ & Time\\
+    $N$ & Gross population in this model\\
+    $\alpha$ & Morbidity of NCP\\
+    $\beta$ & Infection rate\\
+    $\gamma$ & Removal rate\\
+    $d$ & Mortality of NCP\\
+    $h$ & Recovery rate of NCP\\
+    $k$ & Average number of people exposed to infections every day \\
+    $b$ & Probability of infection by contact\\
+    $R_0$ & Basic reproduction number\\
+    $m_i$ & Affecting parameters of $ith$ measure by government \\
+    $ND$ & Number of death\\
+    $NR$ & Number of recovery\\
+    $NSP$ & Number of suspected people\\
+    $NDP$ & Number of diagnosed people\\
+\bottomrule[2pt]
+    \end{tabular}
+\end{table}
+
+
+
+\section{Modified SEIR Model Based on Differential Equation} \label{S4}
+	
+
+\subsection{Introduce our SEIR Model}\label{S4s1}
+	
+
+\subsection{Determination of Unknown Parameters}\label{S4s2}
+	
+	
+
+
+\section{title}\label{S5}
+
+\subsection{Background Illustration}
+   
+    
+\subsection{subsection1}\label{S5s1}
+    
+
+\subsection{subsection2}\label{S5s2}
+	
+ 
+\section{S6}\label{S6}
+   
+	
+\subsection{Simulation Results}
+    
+
+
+\section{Model Analysis}\label{S7}
+
+\subsection{Sensitivity Analysis}
+
+
+\subsection{Strengths and Weaknesses}
+\subsubsection{Strengths}
+\begin{itemize}
+	\item Our model achieves a good simulation in fitting the current infections.
+	\item Our model takes into account the effects of the change of pedestrian flow during the Spring Festival travel rush as well as virus mutations
+	\item The model is a well-organized epidemic model which can be widely applied to other virus disease.
+\end{itemize}
+\subsubsection{Weaknesses}
+\begin{itemize}
+	\item The prediction simulation result can't be verified due to the unknown data in future.  
+	\item A large number of assumptions reduce the accuracy of the model’s simulation results.
+\end{itemize}
+
+
+\section{Conclusion}\label{S8}
+
+
+\newpage
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{newrefs}
+
+\section*{Brief Assessment Report}\label{S9}
+
+\newpage
+
+\begin{appendices}
+
+\section{Solve and Plot Ordinary Differential Equation Systems}
+\lstinputlisting[language=Python]{ODES.py}
+
+\end{appendices}
+
+
+\newpage
+
+
+% \section{Figures}
+
+% %%  单图片模型(不要复制这句话）
+% 	\begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{universe.jpg}%%% \textwidth 可以改图片大小
+%     \caption{biao ti ?}
+%     \label{Fig_1}
+%     \end{figure}
+%     %%% 需要的话，请在这里写图片说明，否则不要复制 %%%
+    
+% %% 1*n图片模型(不要复制这句话）
+%     \begin{figure}[htbp]
+%         \begin{minipage}[t]{0.45\linewidth}
+%         \centering
+%         \includegraphics[height=4cm,width=4cm]{universe.jpg}
+%         \caption{cite??}
+%         \end{minipage}%
+%         \begin{minipage}[t]{0.45\linewidth}
+%         \centering
+%         \includegraphics[heThis is the usage\cite{Wiki_bathtub,mankiw2014principles,finite} of Latex\cite{finite}.
+	
+% ight=4cm,width=4cm]{universe.jpg}
+%         \caption{biao ti ?}
+%         \end{minipage}
+%     \end{figure}
+%      %%% 需要的话，请在这里写图片说明，否则不要复制 %%%
+    
+% %% 合并图片(不要复制这句话）
+%     \begin{figure}
+%     \begin{minipage}{0.48\linewidth}
+%       \centerline{\includegraphics[width=4.0cm]{universe.jpg}}
+%       \centerline{(a) Result 1}
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}{.48\linewidth}
+%       \centerline{\includegraphics[width=4.0cm]{universe.jpg}}
+%       \centerline{(b) Results 2}
+%     \end{minipage}
+%     %% 如果需要 多纵列的话
+%     \vfill
+%     \begin{minipage}{0.48\linewidth}
+%       \centerline{\includegraphics[width=4.0cm]{universe.jpg}}
+%       \centerline{(c) Result 3}
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}{0.48\linewidth}
+%       \centerline{\includegraphics[width=4.0cm]{universe.jpg}}
+%       \centerline{(d) Result 4}
+%     \end{minipage}
+%     %\end{tabular}
+%     \caption{Examples of aaa}
+%     \label{figures}
+%     \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
+
+%%
+%% This work consists of these files mcmthesis.dtx,
+%%                                   figures/ and
+%%                                   code/,
+%% and the derived files             mcmthesis.cls,
+%%                                   mcmthesis-demo.tex,
+%%                                   README,
+%%                                   LICENSE,
+%%                                   mcmthesis.pdf and
+%%                                   mcmthesis-demo.pdf.
+%%
+%% End of file `mcmthesis-demo.tex'.
