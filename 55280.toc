@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Problem Background}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Our Work}{3}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Assumptions and Justifications}{3}{section.2}% 
+\contentsline {section}{\numberline {3}Notations and Definitions}{4}{section.3}% 
+\contentsline {section}{\numberline {4}Modified SEIR Model Based on Differential Equation}{5}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Introduce our SEIR Model}{5}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Determination of Unknown Parameters}{5}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}title}{5}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Background Illustration}{5}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}subsection1}{5}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}subsection2}{5}{subsection.5.3}% 
+\contentsline {section}{\numberline {6}S6}{5}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Simulation Results}{5}{subsection.6.1}% 
+\contentsline {section}{\numberline {7}Model Analysis}{5}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Sensitivity Analysis}{5}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Strengths and Weaknesses}{5}{subsection.7.2}% 
+\contentsline {subsubsection}{\numberline {7.2.1}Strengths}{5}{subsubsection.7.2.1}% 
+\contentsline {subsubsection}{\numberline {7.2.2}Weaknesses}{5}{subsubsection.7.2.2}% 
+\contentsline {section}{\numberline {8}Conclusion}{5}{section.8}% 
+\contentsline {section}{Appendices}{7}{section*.5}% 
+\contentsline {section}{Appendix \numberline {A}Solve and Plot Ordinary Differential Equation Systems}{7}{Appendix.a.A}% 
