@@ -1,0 +1,12 @@
+*.[swp]
+*.[bbl]
+*.[blg]
+*.[fdb_latexmk]
+*.[log]
+*.[fls]
+*.[toc]
+*.[out]
+*.[synctex]
+*.[toc]
+LICENSE
+mcmthesis_old
