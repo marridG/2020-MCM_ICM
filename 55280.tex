@@ -106,7 +106,7 @@
 
 \section{Notations and Definitions}\label{S3}
     For convenience, we define a series of notations for mathematical usage, which are listed in Table \ref{notation} to describe our model.
-\begin{table}[h]\large
+\begin{table}[H]\large
     \centering
     \caption{Notations mentioned in this paper}
     \label{notation}
@@ -139,14 +139,48 @@
 
 
 
-\section{Modified SEIR Model Based on Differential Equation} \label{S4}
-	
+\section{Model Analysis} \label{S4}
+		In this section, we present the \emph{Grey Prediction} method to simulate the change of the average sea surface temperature of a region on the ocean. Also, we use \emph{Differential Equation} to introduce the influence of global warming to the temperature. The framework of the model is shown in Figure 1. Referencing the temperature data in recent years, we calculate the factors in our model using Grey Prediction, which can identify the degree of variation in development trends among system factors. After conducting the solution by Gray Prediction, we additional add the global warming factor since the heavier of carbon emission. Finally, we analyze the immigration of these two fish species as well as the most likely location for these two fish specoes over the next 50 years.
+	% ADD Flow Chart of Model 1
 
-\subsection{Introduce our SEIR Model}\label{S4s1}
-	
+\subsection{Sea Surface Temperature Prediction Model}\label{S4s1}
+	The temperature on the ocean always get affected by a huge number of factors, including solar radiation, ocean currents, carbon emission, Nino phenomenon, etc. To avoid the complex analysis and simplify the problem, we use a grey prediction model to calculate the correlation degree of factors. Besides, the acceleration of global warming, extra differential equations are needed as correction of our model.
 
-\subsection{Determination of Unknown Parameters}\label{S4s2}
-	
+\subsubsection{SST Based on Gray Prediction}\label{S4ss1}
+	Setting 
+
+\subsubsection{Influence of Global Warming}\label{S4ss2}
+	Equation set \ref{set1} shows the mathemetical fundation of the influence of global warming. The parameters are defined as follows:
+
+\begin{itemize}
+	\item $\rho$ indicate the density of the ocean. Since there are only delicate distinction between different region, we let $\rho$ approximately equal to 1. 
+	\item \emph{h} shows the mixed layer depth, which we take
+		\begin{equation*}
+		\emph{h}  = 70m
+		\end {equation*}
+	\item $C_p$ shows the specific heat of a part of ocean, which is defined as 
+		\begin{equation*}
+		Cp\quad za\quad qiu\quad de ???
+		\end {equation*}
+	\item $\gamma$ is a parameter defined in terms of the fraction of land. We assume $\gamma \in \big[0.72,0.75\big]$ 
+	\item $\lambda$ the climatic feedback factor, which is defined as 
+		\begin{equation*}
+		\lambda = 3.58
+		\end {equation*}
+	\item  $\delta F$ express the flux lost from the mixed layer, which is ignored in our model. 
+		
+	\item $\delta Q$ shows the net surface flux, which is defined as
+		\begin{equation*}
+		\delta Q = 34.6534 \times 10^{-4}te^{8.686\times 10^{-3}t}
+		\end {equation*}
+	\item \emph{t} indicates the number of the year, such as 2018, 2019, etc.
+\end{itemize}
+\begin{equation*}\label{set1}
+\gamma\rho C_{p} h\frac{d\delta t}{dt} = \delta Q - \lambda\delta T - \delta F
+\end{equation*}
+\par
+
+\subsection{Fish Immigration}\ref{S4s3}
 	
 
 
