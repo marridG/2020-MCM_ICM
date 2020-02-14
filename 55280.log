@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.6)  14 FEB 2020 11:06
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.6)  14 FEB 2020 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,12 +1008,12 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 76.
 
 
-LaTeX Warning: File `plots/flow_V1.jpg' not found on input line 87.
+LaTeX Warning: File `plots/flow_V1.jpg' not found on input line 89.
 
 ! Unable to load picture or PDF file 'plots/flow_V1.jpg'.
 <to be read again> 
                    }
-l.87 ...hics[width=1\textwidth]{plots/flow_V1.jpg}
+l.89 ...hics[width=1\textwidth]{plots/flow_V1.jpg}
                                                    %%% \textwidth 可以改图片大小
 ? 
 
@@ -1023,45 +1023,49 @@ See the graphics package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.87 ...hics[width=1\textwidth]{plots/flow_V1.jpg}
+l.89 ...hics[width=1\textwidth]{plots/flow_V1.jpg}
                                                    %%% \textwidth 可以改图片大小
 ? 
 File: plots/flow_V1.jpg Graphic file (type bmp)
 <plots/flow_V1.jpg>
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 101.
-
-LaTeX Warning: Citation `pop_un' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `cov_who' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `cov_tencent' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `cov-jhu' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `cov-cdc' on page 3 undefined on input line 101.
-
 [3]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 177.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 103.
 
- (d:/App/texlive/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
+
+LaTeX Warning: Citation `pop_un' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Citation `cov_who' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Citation `cov_tencent' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Citation `cov-jhu' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Citation `cov-cdc' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 179.
+
+(d:/App/texlive/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
- [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
+ [4] [5]
 Missing character: There is no ’ in font pplr8t!
- [5]
+ [6]
 (./55280.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
-) [6]
-Overfull \hbox (12.66696pt too wide) in paragraph at lines 203--203
+) [7]
+Overfull \hbox (12.66696pt too wide) in paragraph at lines 205--205
 []\T1/ppl/b/n/17.28 Solve and Plot Or-di-nary Dif-fer-en-tial Equa-tion Sys-
  []
 
@@ -1078,16 +1082,16 @@ Enter file name:
 ! Undefined control sequence.
 \\lst@inputlisting ...empty }\egroup \lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.204 \lstinputlisting[language=Python]{ODES.py}
+l.206 \lstinputlisting[language=Python]{ODES.py}
                                                 
 ? 
-[7] 
+[8] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
 (./55280.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 273.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
 Package rerunfilecheck Info: File `55280.out' has not changed.
 (rerunfilecheck)             Checksum: 6CD626E5FC781ECD2C8C78EA83924843.
 
@@ -1098,10 +1102,10 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  25471 strings out of 492922
  421270 string characters out of 6135080
- 872498 words of memory out of 5000000
+ 871504 words of memory out of 5000000
  29180 multiletter control sequences out of 15000+600000
  564790 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,11n,94p,864b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,11n,94p,1062b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 55280.pdf (8 pages).
+Output written on 55280.pdf (9 pages).
