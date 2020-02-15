@@ -48,4 +48,23 @@ S.~U. S.~U. Oeschger, H. and A.~Gugelmann, ``A box diffusion model to study the
   carbon dioxide exchange in nature,'' \emph{Tellus}, vol.~27, pp. 168--192,
   1975.
 
+\bibitem{Wiki_herring}
+\BIBentryALTinterwordspacing
+``Herring,'' Wikipedia. [Online]. Available:
+  \url{https://en.wikipedia.org/wiki/Herring}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Wiki_mackerel}
+\BIBentryALTinterwordspacing
+``Mackerel,'' Wikipedia. [Online]. Available:
+  \url{https://en.wikipedia.org/wiki/Mackerel}
+\BIBentrySTDinterwordspacing
+
+\bibitem{scotmarine}
+\BIBentryALTinterwordspacing
+``Scotland's marine atlas: Information for the national marine plan,''
+  GOV.SCOT. [Online]. Available:
+  \url{https://www2.gov.scot/Publications/2011/03/16182005/63}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

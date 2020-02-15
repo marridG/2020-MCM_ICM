@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: 55280.aux
 The style file: IEEEtran.bst
@@ -10,11 +10,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: newrefs.bib
 Warning--string name "https://doi.org/10.1007/bf00143324" is undefined
 --line 127 of file newrefs.bib
-Warning--I didn't find a database entry for "pop_un"
-Warning--I didn't find a database entry for "cov_who"
-Warning--I didn't find a database entry for "cov_tencent"
-Warning--I didn't find a database entry for "cov-jhu"
-Warning--I didn't find a database entry for "cov-cdc"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -44,45 +39,45 @@ Too many commas in name 1 of "Oeschger, H., Siegenthaler, U., Schotterer, U., an
 while executing---line 2403 of file IEEEtran.bst
 
 Done.
-You've used 5 entries,
+You've used 8 entries,
             4087 wiz_defined-function locations,
-            857 strings with 8112 characters,
-and the built_in function-call counts, 3658 in all, are:
-= -- 302
-> -- 60
+            865 strings with 8360 characters,
+and the built_in function-call counts, 4575 in all, are:
+= -- 369
+> -- 63
 < -- 36
-+ -- 39
++ -- 42
 - -- 7
-* -- 178
-:= -- 567
-add.period$ -- 10
-call.type$ -- 5
-change.case$ -- 5
+* -- 211
+:= -- 726
+add.period$ -- 16
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 84
-cite$ -- 5
-duplicate$ -- 257
-empty$ -- 273
+cite$ -- 8
+duplicate$ -- 341
+empty$ -- 375
 format.name$ -- 10
-if$ -- 839
+if$ -- 1044
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 37
-newline$ -- 40
+int.to.str$ -- 8
+missing$ -- 55
+newline$ -- 55
 num.names$ -- 4
-pop$ -- 82
+pop$ -- 148
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 284
+skip$ -- 353
 stack$ -- 0
-substring$ -- 201
-swap$ -- 214
+substring$ -- 204
+swap$ -- 253
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 5
+type$ -- 8
 warning$ -- 0
 while$ -- 16
-width$ -- 6
-write$ -- 71
+width$ -- 9
+write$ -- 98
 (There were 12 error messages)
