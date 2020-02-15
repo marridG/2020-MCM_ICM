@@ -80,8 +80,10 @@
 	
 
 \subsection{Our Work}
-	
-
+	Based on our understanding of the problem, we make Gray Prediction Model as well as Differential Equations to predict the location of fish. Sequenced analysis are based on our prediction.\par
+	The remainder of this article is organized as follows. In Section \ref{S2} and Section \ref{S3}, we put forward
+main assumptions and notations in this paper. Section \ref{S4} shows our predicting process. Section \ref{S5} ... .In Section \ref{S6}, ... . In Section \ref{S7}, we discuss the strengths
+and weaknesses of our models. And finally, we conclude the paper in Section \ref{S8}.
 	The major logic flow is depicted as follows, in Figure \ref{fig:flow}:
 	
 	\begin{figure}[H]
@@ -106,7 +108,7 @@
 
 \section{Notations and Definitions}\label{S3}
     For convenience, we define a series of notations for mathematical usage, which are listed in Table \ref{notation} to describe our model.
-\begin{table}[H]\large
+\begin{table}[H]\normalsize
     \centering
     \caption{Notations mentioned in this paper}
     \label{notation}
@@ -167,7 +169,7 @@
 	Assuming that the SST in the original k-th month is $x^{(0)}(k)$, set the original data as follows:
 \begin{equation*}
 	x^{(0)} = x^{(0)}(1), x^{(0)}(2), ..., x^{(0)}(n)
-\end{equation*}
+\end{equation*}\par
 	We denote
 \begin{equation*}
 	x^{(1)}(k) =  \sum_{i=1}^kx^{(0)}(i) \qquad  ,where\quad k = 1, 2, ..., n
@@ -229,10 +231,7 @@
 		\begin{equation*}
 		\emph{h}  = 70m
 		\end {equation*}
-	\item $C_p$ shows the specific heat of a part of ocean, which is defined as 
-		\begin{equation*}
-		Cp\quad za\quad qiu\quad de ???
-		\end {equation*}
+	\item $C_p$ shows the specific heat of a part of ocean, which is assumed as 30000000J.
 	\item $\gamma$ is a parameter defined in terms of the fraction of land. We assume $\gamma \in \big[0.72,0.75\big]$ 
 	\item $\lambda$ the climatic feedback factor, which is defined as 
 		\begin{equation*}
@@ -246,48 +245,41 @@
 		\end {equation*}
 	\item \emph{t} indicates the number of the year, such as 2018, 2019, etc.
 \end{itemize}
+	Wait sx...
 \begin{equation*}\label{set1}
 \gamma\rho C_{p} h\frac{d\delta t}{dt} = \delta Q - \lambda\delta T - \delta F
 \end{equation*}
+	Wait sx...
 \par
 
 \subsection{Fish Immigration}\label{S4s2}
 	Based on the water temperature predictions we made in Section \ref{S4s1}, we can get the main position where these two fish species located over 50 years. In order to simplify our model, we make the following assumptions:
 \begin{enumerate}[1)]
-	\item {\bfseries A school of fish will not scatter during immigration.} The randomness of scattering will profoundly increase the difficulty.
+	\item {\bfseries A school of fish will not scatter during immigration.} The randomness of scattering will profoundly increase the difficulty. Accordingly, we ignore the case of scattering in this paper.
 	\item {\bfseries The sea surface temperature can represent the temperature at which fishes live.} Since the ocean is too deep for us to analyze the temperature in different depth, we simply take the surface temperature to present the temperature where fishes live.
-\end{enumerate}	
-	 Here add algorithm.
+	\item {\bfseries Fish will move towrads the suitable position.} According to biological theory, animals tend to move to the suitable place to live if their current habitat is not suitable.
+\end{enumerate}	\par
+	 Due to the initial place of fish school is unknowable, we choose five largest fishing companies as the most possible region as the starting region. To iteration, we decide to choose eight direction in the map for moving. Each iteration contains a movement towards on e certain direction where the tempture is favorable to the fish school. The algorithm is shown as Algorithm \ref{alg1}.\par
+
 \IncMargin{1em}
 \begin{algorithm}
-\SetKwData{Left}{left}\SetKwData{This}{this}\SetKwData{Up}{up}
-\SetKwFunction{Union}{Union}\SetKwFunction{FindCompress}{FindCompress}
+\SetKwData{SST}{SST}\SetKwData{Pos}{position}\SetKwData{y}{year}\SetKwData{l}{land}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
-\Input{A bitmap $Im$ of size $w\times l$}
-\Output{A partition of the bitmap}
+\Input{Fish's Starting Position (x, y)}
+\Output{Fish's Positions over 50 Years}
 \BlankLine
-\emph{special treatment of the first line}\;
-\For{$i\leftarrow 2$ \KwTo $l$}{
-\emph{special treatment of the first element of line $i$}\;
-\For{$j\leftarrow 2$ \KwTo $w$}{\label{forins}
-\Left$\leftarrow$ \FindCompress{$Im[i,j-1]$}\;
-\Up$\leftarrow$ \FindCompress{$Im[i-1,]$}\;
-\This$\leftarrow$ \FindCompress{$Im[i,j]$}\;
-\If(\tcp*[h]{O(\Left,\This)==1}){\Left compatible with \This}{\label{lt}
-\lIf{\Left $<$ \This}{\Union{\Left,\This}}
-\lElse{\Union{\This,\Left}}
-}
-\If(\tcp*[f]{O(\Up,\This)==1}){\Up compatible with \This}{\label{ut}
-\lIf{\Up $<$ \This}{\Union{\Up,\This}}
-\tcp{\This is put under \Up to keep tree as flat as possible}\label{cmt}
-\lElse{\Union{\This,\Up}}\tcp*[h]{\This linked to \Up}\label{lelse}
+\emph{Initialize fish school starting position (x, y)}\;
+\For{$\y\leftarrow 0$ \KwTo $50$}{
+%\emph{special treatment of the first element of line $i$}\;
+\For{eight direction$(x_i, y_i)$}{\label{forins}
+\If{$(x_i,y_i)$ is \l} {
+break\;}
+\If{$\left \|\SST(x_i, y_i, \y+1) - \SST(x,y,\y)\right \|$ reaches minimum}{$\Pos = (x_i, y_i,\y)$}
 }
 }
-\lForEach{element $e$ of the line $i$}{\FindCompress{p}}
-}
-\caption{disjoint decomposition}\label{algo_disjdecomp}
-\end{algorithm}\DecMargin{1em}
-
+\caption{Fish Movement Simulation}\label{alg1}
+\end{algorithm}\DecMargin{1em}\par
+	Thus, after 50 rounds of iteration, a solution figure can easily get.\par 
 \section{title}\label{S5}
 
 \subsection{Background Illustration}
