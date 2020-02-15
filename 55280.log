@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.3.12)  15 FEB 2020 15:30
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.3.12)  15 FEB 2020 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,9 +1008,6 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 76.
 
 
-LaTeX Warning: Citation `seir_r0' on page 3 undefined on input line 77.
-
-
 LaTeX Warning: File `plots/flow_V1.jpg' not found on input line 91.
 
 ! Unable to load picture or PDF file 'plots/flow_V1.jpg'.
@@ -1050,13 +1047,7 @@ LaTeX Warning: Citation `cov-jhu' on page 4 undefined on input line 105.
 
 LaTeX Warning: Citation `cov-cdc' on page 4 undefined on input line 105.
 
-[4] [5]
-Overfull \hbox (6.38734pt too wide) in paragraph at lines 168--168
-[]\T1/ppl/m/n/12 According to the al-ready ex-ist-ing SST data, we ini-tial-ize
- our fore-cast-ing model us-ing monthly
- []
-
-[6]
+[4] [5] [6]
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 229.
 
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/omsppl.fd
@@ -1064,14 +1055,10 @@ File: omsppl.fd
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 229.
- [7] [8]
+ [7]
+[8]
 Missing character: There is no ’ in font pplr8t!
- [9]
-(./55280.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 24.
-
-) [10]
+ [9] (./55280.bbl) [10]
 Overfull \hbox (12.66696pt too wide) in paragraph at lines 338--338
 []\T1/ppl/b/n/17.28 Solve and Plot Or-di-nary Dif-fer-en-tial Equa-tion Sys-
  []
@@ -1104,10 +1091,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 25427 strings out of 492933
- 418702 string characters out of 6136537
+ 25432 strings out of 492933
+ 418751 string characters out of 6136537
  715992 words of memory out of 5000000
- 29127 multiletter control sequences out of 15000+600000
+ 29132 multiletter control sequences out of 15000+600000
  577291 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,19n,94p,1070b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
