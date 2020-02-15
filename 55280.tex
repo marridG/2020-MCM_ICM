@@ -261,11 +261,10 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 	\item \emph{t} indicates the number of the year, such as 2018, 2019, etc.
 \end{itemize}
 \par
-	After acquiring these parameters, we can establish a Box-Diffusion Model of ocean temperatures controlled by carbon dioxide in the next fifty years. The differential equation above represents the relationship between sea surface temperature and time. We know that the interaction between carbon dioxide and sea happens at the mixed layer. Therefore, $\delta Q$ is a measuring standard of carbon dioxide. In chemistry, we learn that carbon dioxide plays a leading role in aggravating global warming. In short, we can use the differential equation below to simulate  the relation of global warming and sea surface temperature.
+	After acquiring these parameters, we can establish a Box-Diffusion Model of ocean temperatures controlled by carbon dioxide in the next fifty years. The differential equation above represents the relationship between sea surface temperature and time. We know that the interaction between carbon dioxide and sea happens at the mixed layer. Therefore, $\Delta Q$ is a measuring standard of carbon dioxide. In chemistry, we learn that carbon dioxide plays a leading role in aggravating global warming. In short, we can use the differential equation below to simulate  the relation of global warming and sea surface temperature.
+
 \begin{equation*}\label{set1}
-
 \gamma\rho C_{p} h\frac{d\Delta t}{dt} = \Delta Q - \lambda\Delta T - \Delta F
-
 \end{equation*}
 \par
 	We make use of computer program to solve the differential equation. However, the numerical solution we get is discrete, we have to use the fitting method to simulate the changing situation. We find the relationship between temperature and time is linear, which means the average sea surface temperature will rise at a constant speed under the influence of global warming. By our prediction, the sea surface temperature will rise about 0.028 Centigrade each year. The fitting result is shown below.
