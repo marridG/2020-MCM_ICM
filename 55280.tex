@@ -96,13 +96,13 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 
 
 \section{Assumptions and Justifications}\label{S2}
-    We make some general assumptions to simplify our model. We will list all of the assumptions together with corresponding justification below:
+    We make some general assumptions to simplify our model. We will list some general assumptions with corresponding justification below:
 \begin{enumerate}[1)]
-	\item {\bfseries All of human beings are susceptible to NCP.} NCP was recently discovered and has gene specificity, which make it difficult to be immunized by the body. Thus, we can infer that human beings are susceptible to this virus without previous contact.
-	\item {\bfseries People will not get susceptible to secondary infection of NCP.} Depending on the nature of the body's immune system, after recovery most people will have better immune reaction to virus. We ignore the possibility of secondary infection to simplify our model.
-	\item {\bfseries Assume that incubation period to different individuals are the same.} Since incubation period of different host individual is different and also hard to predict, we assume that incubation periods are the same.
-	\item {\bfseries NCP will only complete the process of human-to-human transmission via close contact such as talking face-to-face.} We simplify our model here since people suffer a rather low  level of risk if they do not have close contact with the infected when it comes to NCP.
-	\item {\bfseries The number of infected people around the world is almost the number of infected people in China}. Although countries except China accounts for 71.57\% of the world population \small{(till August 28th, 2019, by United Nations \cite{pop_un})}, only less than  0.77\%of confirmed cases occurred outside China \small{(till February 3rd, 2020, by various organizations \cite{cov_who}\cite{cov_tencent}\cite{cov-jhu}\cite{cov-cdc}; with detailed information listed in Appendix)}. Meanwhile, after NCP was discovered in China, all the other countries took immediate action against the spread. Therefore, what deserves our attention is more the circumstances in China.
+	\item\label{ass1} {\bfseries Fishes will move towards the position where the living condition is suitable for them.} Most fish prefer to live in warmer places than in colder ones. As the temperature changes, the fish changes range of activity to a zone of water suitable for its existence.
+	\item\label{ass2} {\bfseries Sea surface temperature is the determinant leading to the migration of fishes.} This assumption is directly from Assumption \ref{ass1}. As the temperature in different depth in the ocean is distinct, which is affected by many factors making it hard to predict, we just assume the temperature in different depth is the same as the surface temperature.
+	\item\label{ass3} {\bfseries Fish will not change living habits in the next fifty years.} It usually takes thousands of years for species to adapt to the living environment. Once living habit is established, it is hard to change. Fifty years is a short period of time, the change of living habits can be ignored. 
+	\item\label{ass4} {\bfseries Fishing companies always pursue maximum profit.} A company is in need of making profit to survive and expand. We regard making profit as the first law for corporation to survival. That is to say, decisions are made for sake of maximized profit.
+	\item\label{ass5} {\bfseries The fish schools are around four major ports in Scotland.} With abundant fish schools, these company can always expand their industries. Thus, we assume that main fish schools are around the major companies in Scotland.
 \end{enumerate}
 
 
@@ -146,7 +146,7 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 	% ADD Flow Chart of Model 1
 
 \subsection{Sea Surface Temperature Forecasting Model}\label{S4s1}
-	The temperature on the ocean always gets affected by a huge number of factors, including solar radiation, ocean currents, carbon emission, Nino phenomenon, etc. To avoid the complex analysis and simplify the problem, we use a gray forecasting model to calculate the correlation degree of factors. Besides, the acceleration of global warming, extra differential equations are needed as correction of our model.
+	The temperature on the ocean always gets affected by a huge number of factors, including solar radiation, ocean currents, carbon emission, El Nino phenomenon, etc. To avoid the complex analysis and simplify the problem, we use a gray forecasting model to calculate the correlation degree of factors. Besides, the acceleration of global warming, extra differential equations are needed as correction of our model.
 
 \subsubsection{SST Based on Gray Forecasting}\label{S4ss1}
 	We first denote the symbols and terms used in this part.
@@ -158,6 +158,7 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 \toprule[2pt]
         Symbol & Definition\\
 \hline
+    $SST$ & Sea surface Temperature \\
     $AGO$ & Accumulated Generating Operation\\
     $GM(1,1)$ & Gray Model\\
     $IAGO$ & Inverse Accumulated Generating Operation\\
@@ -165,7 +166,7 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 \bottomrule[2pt]
     \end{tabular}
 \end{table}
-	According to the already existing SST data, we initialize our forecasting model using monthly statistics from January, 2006 as the first month to January, 2020 .\par
+	According to the already existing SST data\cite{sstdata}, we initialize our forecasting model using monthly statistics from January, 2006 as the first month to January, 2020 .\par
 	Assuming that the SST in the original k-th month is $x^{(0)}(k)$, set the original data as follows:
 \begin{equation*}
 	x^{(0)} = x^{(0)}(1), x^{(0)}(2), ..., x^{(0)}(n)
@@ -178,7 +179,7 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 \begin{equation*}
 	\lambda(k) =  \frac{x^{(0)}(k-1)}{x^{(0)}(k)}
 \end{equation*}\par
-	Due to all $\lambda k \in \big[0.982, 1.0098\big]$, we can reach a fatisfying model using GM(1,1).
+	Due to all $\lambda k \in \big[0.982, 1.0098\big]$, we can reach a satisfying model using GM(1,1).
 	By $AGO$, 
 \begin{equation*}
 	x^{(1)}(k) =  \sum_{i=1}^kx^{(0)}(i) \qquad  ,where\quad k = 1, 2, ..., n
@@ -211,18 +212,18 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 \end{matrix}\right]
 \end{equation}\par
 \begin{equation*} 
-	\hat{\mu} = (a, b)^{T} = (B^{T}B)^{-1}B^{T}Y = ???
+	\hat{\mu} = (a, b)^{T} = (B^{T}B)^{-1}B^{T}Y = (3.21*10^{-4},295)^{T}
 \end{equation*}\par
 \begin{equation*}
-	\frac{dx^{(1)}}{dt} + ?? x^{(1)} = ??
+	\frac{dx^{(1)}}{dt} + 3.21*10^{-4} x^{(1)} = 295
 \end{equation*}\par
 	Solution is, 
 \begin{equation*}
-	x^{(1)}(k+1) = (x^{(1)}(k) - \frac{b}{a})e^{-ak} + \frac{b}{a} = ???
+	x^{(1)}(k+1) = (x^{(1)}(k) - \frac{b}{a})e^{-ak} + \frac{b}{a} 
 \end{equation*}\par
 	Until now, we get the forecasting value of future sea surface temperature. \par
 	Rechecking: \par
-	We compared the results obtained by this model with the true situation from 2006 to 2020, conducting the residual relative to the actual data. The following figure shows the residual distribution, from which we can tell the accurary of our prediction.\par
+	We compared the results obtained by this model with the true situation from 2006 to 2020, conducting the residual relative to the actual data. The following figure shows the residual distribution, from which we can tell the accuracy of our prediction.\par
      \begin{figure}[H]
      \begin{minipage}{0.5\linewidth}
        \centerline{\includegraphics[width=9.0cm]{plots/grey_forcast_err_1_V1.png}}
@@ -238,67 +239,117 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
      \end{figure}
 
 \subsubsection{Influence of Global Warming}\label{S4ss2}
-	Equation \ref{set1} shows the mathemetical fundation of the influence of global warming. The parameters are defined as follows:
+	Equation \ref{set1} shows the mathematical foundation of the influence of global warming. The parameters are defined as follows:
 
 \begin{itemize}
 	\item $\rho$ indicate the density of the ocean. Since there are only delicate distinction between different region, we let $\rho$ approximately equal to 1. 
-	\item \emph{h} shows the mixed layer depth, which we take
+	\item \emph{h} shows the mixed layer depth, which we take\cite{globalwarming}
 		\begin{equation*}
 		\emph{h}  = 70m
 		\end {equation*}
-	\item $C_p$ shows the specific heat of a part of ocean, which is assumed as 30000000J.
-	\item $\gamma$ is a parameter defined in terms of the fraction of land. We assume $\gamma \in \big[0.72,0.75\big]$ 
-	\item $\lambda$ the climatic feedback factor, which is defined as 
+	\item $C_p$ shows the specific heat of a part of ocean, which is assumed as $60000000J$.
+	\item $\gamma$ is a parameter defined in terms of the fraction of land. We assume $\gamma \in \big[0.72,0.75\big]$ \cite{co2dat}
+	\item $\lambda$ the climatic feedback factor, which is defined as \cite{globalwarming}
 		\begin{equation*}
-		\lambda = 3.58
+		\lambda = 3.58 W m^{-2} K^{-1}
 		\end {equation*}
 	\item  $\Delta F$ express the flux lost from the mixed layer, which is ignored in our model. 
 		
-	\item $\Delta Q$ shows the net surface flux, which is defined as
+	\item $\Delta Q$ shows the net surface flux, which is defined as\cite{modelsol}
 		\begin{equation*}
 		\Delta Q = 34.6534 \times 10^{-4}te^{8.686\times 10^{-3}t}
 		\end {equation*}
 	\item \emph{t} indicates the number of the year, such as 2018, 2019, etc.
 \end{itemize}
 \par
-	After acquiring these parameters, we can establish a Box-Diffusion Model of ocean temperatures controlled by carbon dioxide in the next fifty years. The differential equation above represents the relationship between sea surface temperature and time. We know that the interaction between carbon dioxide and sea happens at the mixed layer. Therefore, $\Delta Q$ is a measuring standard of carbon dioxide. In chemistry, we learn that carbon dioxide plays a leading role in aggravating global warming. In short, we can use the differential equation below to simulate  the relation of global warming and sea surface temperature.
-
+	After acquiring these parameters, we can establish a Box-Diffusion Model\cite{funct} to predict temperature change sequenced by carbon dioxide emission in the next fifty years. Differential equation \ref{set1} represents the relationship between sea surface temperature and time. It is already know that the interaction between carbon dioxide and sea happens in the mixed layer. Therefore, $\Delta Q$ can be used as a measuring standard of carbon dioxide. The main cause of global warming in recent decades is the exacerbated greenhouse effect resulting from the increasing emission of carbon. To illustrate the relation of global warming and sea surface temperature, we establish Differential Equation \ref{set1}.
+\begin{spacing}{1.5}
 \begin{equation*}\label{set1}
-\gamma\rho C_{p} h\frac{d\Delta t}{dt} = \Delta Q - \lambda\Delta T - \Delta F
+\gamma\rho C_{p} h\frac{d\Delta T}{dt} = \Delta Q - \lambda\Delta T - \Delta F
 \end{equation*}
+\end{spacing}
 \par
-	We make use of computer program to solve the differential equation. However, the numerical solution we get is discrete, we have to use the fitting method to simulate the changing situation. We find the relationship between temperature and time is linear, which means the average sea surface temperature will rise at a constant speed under the influence of global warming. By our prediction, the sea surface temperature will rise about 0.028 Centigrade each year. The fitting result is shown below.
+	We make use of computer program to solve the differential equation. However, the numerical solution we get is discrete, we have to use the fitting method to simulate the changing situation. We find the relationship between temperature and time is linear, which means the average sea surface temperature will rise at a constant speed under the influence of global warming. By our prediction, the sea surface temperature will rise about 0.033 Centigrade each year. The fitting result is shown below.
 %picture here 
 \par
 
-\subsection{Fish Immigration}\label{S4s2}
-	Based on the water temperature predictions we made in Section \ref{S4s1}, we can get the main position where these two fish species located over 50 years. In order to simplify our model, we make the following assumptions:
+\subsection{FISH: Fish Immigration Simulation Heuristic Model}\label{S4s2}
+	Based on the water temperature predictions we finished in Section \ref{S4s1}, we can get the main position where these two fish species located in the next 50 years by \textbf{FISH Model}. In section \ref{S4s21}, we arrange some simplifications and corresponding justification to illustrate. In section \ref{S4s22}, we give further details and results as well as sequenced analysis based on the model.\par
+	
+\subsubsection{Simplification and Justification}\label{S4s21}
+	In order to simplify our model, we make the following assumptions:
 \begin{enumerate}[1)]
 	\item {\bfseries A school of fish will not scatter during immigration.} The randomness of scattering will profoundly increase the difficulty. Accordingly, we ignore the case of scattering in this paper.
-	\item {\bfseries The sea surface temperature can represent the temperature at which fishes live.} Since the ocean is too deep for us to analyze the temperature in different depth, we simply take the surface temperature to present the temperature where fishes live.
-	\item {\bfseries Fish will move towrads the suitable position.} According to biological theory, animals tend to move to the suitable place to live if their current habitat is not suitable.
+    \item {\bfseries The sea surface temperature can represent the temperature at which fishes live.} This assumption is just a specification of Assumption \ref{ass2}. Since the ocean is too deep for us to analyze the temperature in different depth, we simply take the surface temperature to present the temperature where fishes live.
+% 	\item {\bfseries Fish will move towards the suitable position.} According to biological theory, animals tend to move to the suitable place to live if their current habitat is not suitable.
 \end{enumerate}	\par
-	 Due to the initial place of fish school is unknowable, we choose five largest fishing companies as the most possible region as the starting region. To iteration, we decide to choose eight direction in the map for moving. Each iteration contains a movement towards on e certain direction where the tempture is favorable to the fish school. The algorithm is shown as Algorithm \ref{alg1}.\par
+     % 两种鱼的相似性 
+    Another reasonable simplification is that \textbf{we consider herring and mackerel as similar species}. This is supported by many arguments. We list several of them in the following list:
+\begin{itemize}
+	\item Herring and mackerel are similar in their length and weight as well as the capability of swimming. According to documentation, herring is always  about $40cm$, one kilometer, while mackerel is just a bit heavier than herring. Also, they both can swim in a quick speed, which shows they enjoy the same level of mobility\cite{Wiki_herring}\cite{Wiki_mackerel}.
+	\item In terms of trophic level, they both prey on phytoplankton as well as small crustaceans such as copepods, forage fish, shrimp, and squid. There are not significant differ in their positions in food chain.
+	\item They both live in mid-water pelagic environments\cite{Wiki_herring}\cite{Wiki_mackerel}. The similar living condition of herring and mackerel allows them living under similar temperatures under ocean. 
+	\item Herring and mackerel are fished for by similar ships. As is claimed by Scottish Government, herring and mackerel are mainly targeted by the pelagic fleet, which always has large, profitable vessels\cite{scotmarine}. 
+\end{itemize}
+\subsubsection{FISH Model and Results}\label{S4s22}
+	 Due to the initial place of fish school is unknowable, we choose four major fishing ports as the most possible region as the starting region. To iterate, we decide to choose eight directions as the moving directions. Each iteration contains a movement towards one certain direction where the temperature is favorable to the fish school. The algorithm that we use in FISH Model is shown as Algorithm \ref{alg1}.\par
+
 
 \IncMargin{1em}
-\begin{algorithm}
-\SetKwData{SST}{SST}\SetKwData{Pos}{position}\SetKwData{y}{year}\SetKwData{l}{land}
+\begin{algorithm}[H]
+\SetKwData{SST}{SST}
+\SetKwData{y}{year}
+\SetKwData{l}{sea}
+\SetKwData{d}{direction}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
-\Input{Fish's Starting Position (x, y)}
-\Output{Fish's Positions over 50 Years}
+
+\Input{Fish's Starting Position (X, Y), Predicted Yearly Temperature Data }
+\Output{Fish's Positions in the next 50 Years}
 \BlankLine
-\emph{Initialize fish school starting position (x, y)}\;
-\For{$\y\leftarrow 0$ \KwTo $50$}{
-%\emph{special treatment of the first element of line $i$}\;
-\For{eight direction$(x_i, y_i)$}{\label{forins}
-\If{$(x_i,y_i)$ is \l} {
-break\;}
-\If{$\left \|\SST(x_i, y_i, \y+1) - \SST(x,y,\y)\right \|$ reaches minimum}{$\Pos = (x_i, y_i,\y)$}
+\BlankLine
+\emph{Initialize fish school starting position $ (x, y) = (X, Y)$}\;
+\SetAlgoLined\SetArgSty{}
+\For{$\y$ $\leftarrow$ 0 $\KwTo$ 50}{
+\emph{Generating Moore Neighborhood of (x, y): MH(x, y)}\;
+\For{$\d \in MH(x, y) = \left[NW, W, SW, S, SE, E, NE, N\right]$}{
+    \If{$(x_{i},y_{i})$ is $\l$} {
+	$\sigma_i = \left \|\SST(x_i, y_i, \y+1) - \SST(x,y,\y)\right \|$}}
+    find $i_{min}$, $\quad$ s.t. $\sigma_{i_{min}} \leq \sigma_i$ ,for $\forall i$ \;
+\If{$\sigma_{i_{min}} < \delta $} {  
+$(x, y) \leftarrow (x_i, y_i)$}
 }
-}
-\caption{Fish Movement Simulation}\label{alg1}
+\caption{Fish Immigration Simulation Heuristics}\label{alg1}
 \end{algorithm}\DecMargin{1em}\par
-	Thus, after 50 rounds of iteration, a solution figure can easily get.\par 
+    According to Assumption \ref{ass5}, we take several locations of fishing ports as just the positions where fishes live. The port locations we choose are listed in Table \ref{loca}. Starting from the initial longitude and latitude coordinate, fishes would always move to the next coordinate with the closest temperature. The sea surface temperature prediction model we built in section \ref{S4s1} provides temperature data yearly. Thus, here we also calculate forty-nine times' movement of fish schools in the next fifty years. Each time the fish schools' movement leads to one degree's change in either longitude or latitude or together. It is worth mentioning that if the temperatures of  eight directions are all different from the central coordinate ``a lot", the fish will stay at the same position till the next year. Exactly, we set the maximum of difference to be 0.5 Centigrade as a measuring standard of ``a lot". In short, if the differences between central position's temperature and eight surrounding positions' temperatures are all greater than 0.5 Centigrade, the fishes will not move in this year. In Algorithm \ref{alg1}, symbol $\delta$ means the allowed temperature difference 0.5 Centigrade. \par
+\begin{table}[H]\normalsize
+    \centering
+    \caption{Fishing Ports Information Table}
+    \label{loca}
+    \begin{tabular}{c c c}
+\toprule[2pt]
+        Fishing Port & Latitude & Longitude\\
+\hline
+    Stornoway & 57.7N & 2.03W\\
+    Ayr & 55.5N & 4.63W\\
+    Campbeltown & 55.5N & 5.54W\\
+    Ullapool & 57.9N & 2.51W\\
+    Portree & 57.4N & 6.2W\\
+\bottomrule[2pt]
+    \end{tabular}
+\end{table}
+    \par
+	We input the longitude and latitude coordinates of the chosen fishing ports shown in Table \ref{loca}. After 50 rounds of iteration, a solution figure can easily get. Such solution figure shows the  result of fish immigration simulation. The detailed information is shown in the Figurelalalalalala \par % 这里加入图片
+
+
+
+\subsection{Analysis for Small Fishing Companies}\label{S4s3}
+	From previous models, we predict the position of fish schools in the next 50 years. In terms of small fishing companies, whose ability to make distant voyage is relatively low, the location of fish school will definitely determine their destiny. Our team, in this section, arrange some method to evaluate the different cases that may occur in the next 50 years according to the immigration processes of fish schools.\par
+	    % 算法简介 Here
+	    
+	    % 步骤解释 这里
+	    
+	    % 结果分析 这里
+	    
 \section{title}\label{S5}
 
 \subsection{Background Illustration}
