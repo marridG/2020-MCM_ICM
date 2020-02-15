@@ -220,8 +220,23 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 \begin{equation*}
 	x^{(1)}(k+1) = (x^{(1)}(k) - \frac{b}{a})e^{-ak} + \frac{b}{a} = ???
 \end{equation*}\par
-	Until now, we get the forecasting value of future sea surface temperature.\par
-	
+	Until now, we get the forecasting value of future sea surface temperature. \par
+	Rechecking: \par
+	We compared the results obtained by this model with the true situation from 2006 to 2020, conducting the residual relative to the actual data. The following figure shows the residual distribution, from which we can tell the accurary of our prediction.\par
+     \begin{figure}[H]
+     \begin{minipage}{0.5\linewidth}
+       \centerline{\includegraphics[width=9.0cm]{plots/grey_forcast_err_1_V1.png}}
+       \centerline{(a) Upper Bounds}
+     \end{minipage}
+     \hfill
+     \begin{minipage}{.5\linewidth}
+       \centerline{\includegraphics[width=9.0cm]{plots/grey_forcast_err_2_V1.png}}
+       \centerline{(b) Lower Bounds}
+     \end{minipage}
+     \caption{Residual Distribution}
+     \label{figures}
+     \end{figure}
+
 \subsubsection{Influence of Global Warming}\label{S4ss2}
 	Equation \ref{set1} shows the mathemetical fundation of the influence of global warming. The parameters are defined as follows:
 
@@ -237,17 +252,17 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 		\begin{equation*}
 		\lambda = 3.58
 		\end {equation*}
-	\item  $\delta F$ express the flux lost from the mixed layer, which is ignored in our model. 
+	\item  $\Delta F$ express the flux lost from the mixed layer, which is ignored in our model. 
 		
-	\item $\delta Q$ shows the net surface flux, which is defined as
+	\item $\Delta Q$ shows the net surface flux, which is defined as
 		\begin{equation*}
-		\delta Q = 34.6534 \times 10^{-4}te^{8.686\times 10^{-3}t}
+		\Delta Q = 34.6534 \times 10^{-4}te^{8.686\times 10^{-3}t}
 		\end {equation*}
 	\item \emph{t} indicates the number of the year, such as 2018, 2019, etc.
 \end{itemize}
 	Wait sx...
 \begin{equation*}\label{set1}
-\gamma\rho C_{p} h\frac{d\delta t}{dt} = \delta Q - \lambda\delta T - \delta F
+\gamma\rho C_{p} h\frac{d\Delta t}{dt} = \Delta Q - \lambda\Delta T - \Delta F
 \end{equation*}
 	Wait sx...
 \par
