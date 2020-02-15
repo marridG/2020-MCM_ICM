@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.3.12)  15 FEB 2020 15:18
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.3.12)  15 FEB 2020 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,6 +1006,9 @@ This may cause the page layout to be inconsistent, however.
  [2]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 76.
+
+
+LaTeX Warning: Citation `seir_r0' on page 3 undefined on input line 77.
 
 
 LaTeX Warning: File `plots/flow_V1.jpg' not found on input line 91.

@@ -165,7 +165,7 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 \bottomrule[2pt]
     \end{tabular}
 \end{table}
-	According to the already existing SST data, we initialize our forecasting model using monthly statistics from January, 2006 as the first month to January, 2020 .\par
+	According to the already existing SST data\cite{sstdata}, we initialize our forecasting model using monthly statistics from January, 2006 as the first month to January, 2020 .\par
 	Assuming that the SST in the original k-th month is $x^{(0)}(k)$, set the original data as follows:
 \begin{equation*}
 	x^{(0)} = x^{(0)}(1), x^{(0)}(2), ..., x^{(0)}(n)
@@ -229,24 +229,24 @@ and weaknesses of our models. And finally, we conclude the paper in Section \ref
 	\item $\rho$ indicate the density of the ocean. Since there are only delicate distinction between different region, we let $\rho$ approximately equal to 1. 
 	\item \emph{h} shows the mixed layer depth, which we take
 		\begin{equation*}
-		\emph{h}  = 70m
+		\emph{h}  = 70m \cite{globalwarming}
 		\end {equation*}
 	\item $C_p$ shows the specific heat of a part of ocean, which is assumed as 30000000J.
-	\item $\gamma$ is a parameter defined in terms of the fraction of land. We assume $\gamma \in \big[0.72,0.75\big]$ 
-	\item $\lambda$ the climatic feedback factor, which is defined as 
+	\item $\gamma$ is a parameter defined in terms of the fraction of land. We assume $\gamma \in \big[0.72,0.75\big]$  \cite{co2dat}
+	\item $\lambda$ the climatic feedback factor, which is defined as \cite{globalwarming}
 		\begin{equation*}
 		\lambda = 3.58
 		\end {equation*}
 	\item  $\delta F$ express the flux lost from the mixed layer, which is ignored in our model. 
 		
-	\item $\delta Q$ shows the net surface flux, which is defined as
+	\item $\delta Q$ shows the net surface flux, which is defined as\cite{modelsol}
 		\begin{equation*}
 		\delta Q = 34.6534 \times 10^{-4}te^{8.686\times 10^{-3}t}
 		\end {equation*}
 	\item \emph{t} indicates the number of the year, such as 2018, 2019, etc.
 \end{itemize}
 \par
-	After acquiring these parameters, we can establish a Box-Diffusion Model of ocean temperatures controlled by carbon dioxide in the next fifty years. The differential equation above represents the relationship between sea surface temperature and time. We know that the interaction between carbon dioxide and sea happens at the mixed layer. Therefore, $\delta Q$ is a measuring standard of carbon dioxide. In chemistry, we learn that carbon dioxide plays a leading role in aggravating global warming. In short, we can use the differential equation below to simulate  the relation of global warming and sea surface temperature.
+	After acquiring these parameters, we can establish a Box-Diffusion Model\cite{funct} of ocean temperatures controlled by carbon dioxide in the next fifty years. The differential equation below represents the relationship between sea surface temperature and time. We know that the interaction between carbon dioxide and sea happens at the mixed layer. Therefore, $\delta Q$ is a measuring standard of carbon dioxide. In chemistry, we learn that carbon dioxide plays a leading role in aggravating global warming. In short, we can use the differential equation below to simulate  the relation of global warming and sea surface temperature.
 \begin{equation*}\label{set1}
 \gamma\rho C_{p} h\frac{d\delta T}{dt} = \delta Q - \lambda\delta T - \delta F
 \end{equation*}
