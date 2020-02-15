@@ -28,7 +28,7 @@
 %%
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
-        tcn = Hello, problem = A,
+        tcn = 2014906, problem = A,
         sheet = true, titleinsheet = true, keywordsinsheet = true,
         titlepage = true}
 \usepackage{palatino}
@@ -74,9 +74,9 @@
 \section{Introduction}	\label{S1}
 
 \subsection{Problem Background}
-	The ocean is covering approximately 1.3 billion cubic kilometers on Earth, which is the equvalent of 97 percent of total water. Playing a vital role on oxygen producing, carbon sequestering and food providing for billions of people, the ocean's abilities are being eroded by plenty of stressors. \par
-	Since the 1950s, the oceans has absorbed more than 93 percent of all the heat that produced by human, which is beginning to show its drawbacks at a price. Marine organisms, as an import part in the ocean, can be affected when there are changes in their natural habitat as well as changes in ocean chemistry. As a primary producer of the food chain in the ocean, phytoplankton, a kind of marine plants, is facing a slowly decrease if the water becomes warmer, which results in the reduction of the amount of nutrients in the ocean. The scarcity of nutrients will limit the growth of marine organisms in the food chain. In addition, temperature plays an important role on controling biological rhythm of marine plants and animals involving birth, growth, feeding, production and death. The changes in ocean temperature will cause a disruption of biological rhythm making marine organisms become vulnerable to illness. Moreover, sequenced lowering of the pH of seawater is unfavorable to the hatching of eggs and the growth of fry of some sea fish.\par
-	The anticipated increase in ocean temperature is predicted to stimulate the migration of marine organisms based on their temperature tolerance, with heat-tolerant species expanding their range northward and those less tolerant species retreating. Just as the lobster of Maine, USA, thousands of aquatic species are forced to migrating north to find a better habitat. As an impact, relative companies need to move their base to survive. \par
+	The ocean is covering approximately 1.3 billion cubic kilometers on Earth, which is the equivalent of 97 percent of total water. Playing a vital role in oxygen producing, carbon sequestering and food providing for billions of people, the ocean's abilities are being eroded by plenty of stressors. \par
+	Since the 1950s, the oceans hava absorbed more than 93 percent of all the heat that produced by human, which is beginning to show its drawbacks at a price. Marine organisms, as an import part in the ocean, can be affected when there are changes in their natural habitat as well as changes in ocean chemistry. As a primary producer of the food chain in the ocean, phytoplankton, a kind of marine plants, is facing a slowly decrease if the water becomes warmer, which results in the reduction of the amount of nutrients in the ocean. The scarcity of nutrients will limit the growth of marine organisms in the food chain. In addition, temperature plays an important role in controlling biological rhythm of marine plants and animals involving birth, growth, feeding, production and death. The changes in ocean temperature will cause a disruption of biological rhythm making marine organisms become vulnerable to illness. Moreover, sequence lowering of the pH of seawater is unfavorable to the hatching of eggs and the growth of fry of some sea fish.\par
+	The anticipated increase in ocean temperature is predicted to stimulate the migration of marine organisms based on their temperature tolerance, with heat-tolerant species expanding their range northward and those less tolerant species retreating. Just as the lobster of Maine, USA, thousands of aquatic species is forced to migrating north to find a better habitat. As an impact, relative companies need to move their base to survive. \par
 	
 
 \subsection{Our Work}
@@ -140,17 +140,85 @@
 
 
 \section{Model Analysis} \label{S4}
-		In this section, we present the \emph{Grey Prediction} method to simulate the change of the average sea surface temperature of a region on the ocean. Also, we use \emph{Differential Equation} to introduce the influence of global warming to the temperature. The framework of the model is shown in Figure 1. Referencing the temperature data in recent years, we calculate the factors in our model using Grey Prediction, which can identify the degree of variation in development trends among system factors. After conducting the solution by Gray Prediction, we additional add the global warming factor since the heavier of carbon emission. Finally, we analyze the immigration of these two fish species as well as the most likely location for these two fish specoes over the next 50 years.
+		In this section, we present the \emph{Gray Forecasting} method to simulate the change of the average sea surface temperature of a region on the ocean. Also, we use \emph{Differential Equation} to introduce the influence of global warming to the temperature. The framework of the model is shown in Figure 1. Referencing the temperature data onto recent years, we calculate the factors of our model using Gray Forecasting, which can identify the degree of variation in development trends among system factors. After conducting the solution by Gray Forecasting, we additional add the global warming factor of the heavier of carbon emission. Finally, we analyze the immigration of these two fish species as well as the most likely location for these two fish species over the next 50 years.
 	% ADD Flow Chart of Model 1
 
-\subsection{Sea Surface Temperature Prediction Model}\label{S4s1}
-	The temperature on the ocean always get affected by a huge number of factors, including solar radiation, ocean currents, carbon emission, Nino phenomenon, etc. To avoid the complex analysis and simplify the problem, we use a grey prediction model to calculate the correlation degree of factors. Besides, the acceleration of global warming, extra differential equations are needed as correction of our model.
+\subsection{Sea Surface Temperature Forecasting Model}\label{S4s1}
+	The temperature on the ocean always gets affected by a huge number of factors, including solar radiation, ocean currents, carbon emission, Nino phenomenon, etc. To avoid the complex analysis and simplify the problem, we use a gray forecasting model to calculate the correlation degree of factors. Besides, the acceleration of global warming, extra differential equations are needed as correction of our model.
 
-\subsubsection{SST Based on Gray Prediction}\label{S4ss1}
-	Setting 
-
+\subsubsection{SST Based on Gray Forecasting}\label{S4ss1}
+	We first denote the symbols and terms used in this part.
+\begin{table}[H]\large
+    \centering
+    \caption{Symbols and Terms}
+    \label{symbol}
+    \begin{tabular}{c c}
+\toprule[2pt]
+        Symbol & Definition\\
+\hline
+    $AGO$ & Accumulated Generating Operation\\
+    $GM(1,1)$ & Gray Model\\
+    $IAGO$ & Inverse Accumulated Generating Operation\\
+    $...$ & ...\\
+\bottomrule[2pt]
+    \end{tabular}
+\end{table}
+	According to the already existing SST data, we choose from 2006.1 as the first month to 2020.1.\par
+	Assuming that the SST in the original k-th month is $x^{(0)}(k)$, set the original data as follows: $ x^{(0)} = x^{(0)}(1), x^{(0)}(2), ..., x^{(0)}(n)$\par
+	We denote
+\begin{equation*}
+	x^{(1)}(k) =  \sum_{i=1}^kx^{(0)}(i) \qquad  ,where k = 1, 2, ..., n
+\end{equation*}\par
+	Then, we calculate the class ratio $\lambda{k}$
+\begin{equation*}
+	\lambda(k) =  \frac{x^{(0)}(k-1)}{x^{(0)}(k)}
+\end{equation*}\par
+	Due to all $\lambda k \in \big[0.982, 1.0098\big]$, we can reach a fatisfying model using GM(1,1).
+	By $AGO$, 
+\begin{equation*}
+	x^{(1)}(k) =  \sum_{i=1}^kx^{(0)}(i) \qquad  ,where k = 1, 2, ..., n
+\end{equation*}\par
+	Take differential, i.e.
+\begin{equation*}
+	d(k) = x^{(0)}(k) = x^{(1)}(k) - x^{(1)}(k-1)
+\end{equation*}\par
+	Denote $z^{(1)}(k)$ as the adjacent value generated sequence, i.e.
+\begin{equation*}
+	z^{(1)}(k) = \alpha x^{(1)}(k) + (1-\alpha)x^{(1)}(k-1)
+\end{equation*}\par
+	So, we get the model as
+\begin{equation*}
+	d(k) = \alpha z^{(1)}(k) = b
+\end{equation*}\par
+	We then construct Data Matrix $B$ and Data Vector $Y$
+\begin{equation}
+	B =  \left[ \begin{matrix}
+						-\frac{1}{2}(x^{(1)}(1)+x^{(1)}(2))  & 1 \\
+						-\frac{1}{2}(x^{(1)}(2)+x^{(1)}(3))  & 1 \\
+										...									& ... \\
+						-\frac{1}{2}(x^{(1)}(k)+x^{(1)}(k+1))  & 1 \\
+\end{matrix}\right],
+	Y =  \left[ \begin{matrix}
+						x^{(0)}(2)\\
+						x^{(0)}(3)\\
+							...    \\
+						x^{(0)}(k)\\
+\end{matrix}\right]
+\end{equation}\par
+\begin{equation*} 
+	\hat{\mu} = (a, b)^{T} = (B^{T}B)^{-1}B^{T}Y = ???
+\end{equation*}\par
+\begin{equation*}
+	\frac{dx^{(1)}}{dt} + ?? x^{(1)} = ??
+\end{equation*}\par
+	Solution is, 
+\begin{equation*}
+	x^{(1)}(k+1) = (x^{(1)}(k) - \frac{b}{a})e^{-ak} + \frac{b}{a} = ???
+\end{equation*}
+	Until now, we get the forecasting value of future sea surface temperature.\par
+	
 \subsubsection{Influence of Global Warming}\label{S4ss2}
-	Equation set \ref{set1} shows the mathemetical fundation of the influence of global warming. The parameters are defined as follows:
+	Equation \ref{set1} shows the mathemetical fundation of the influence of global warming. The parameters are defined as follows:
 
 \begin{itemize}
 	\item $\rho$ indicate the density of the ocean. Since there are only delicate distinction between different region, we let $\rho$ approximately equal to 1. 
