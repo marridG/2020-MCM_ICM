@@ -1,3 +1,23 @@
+# =============================================
+#
+# TERMS AND CONDITIONS
+# FOR USE, REPRODUCTION, AND DISTRIBUTION
+#
+# Apache License 2.0
+#
+# =============================================
+
+# *********************************************
+#
+# Author:
+#   2020 MCM/ICM Team 2014906
+#
+# Last Update:
+#   Feb. 17, 2020
+#
+# *********************************************
+
+
 import datetime
 import netCDF4 as nc
 import numpy as np
