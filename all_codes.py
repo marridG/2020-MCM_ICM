@@ -106,7 +106,6 @@ print("Prediction Shape:", predict_ori.shape, predict_fifty.shape)
 # Calculate & Plot the relative difference 2006.1.1 to 2020.1.1 (%): (origin-prediction)/origin*100%
 # [Calculate]
 relative_dif = (z - predict_ori) / z * 100
-print(np.ma.getdata(z).shape, relative_dif.shape)
 plt_diff_1 = np.max(relative_dif, axis=0)
 plt_diff_2 = np.min(relative_dif, axis=0)
 plt_dif_thres = 10
@@ -269,7 +268,6 @@ for harb_idx in target_harb_idx:
                       icon=fo.Icon(color="lightred", icon="cloud")).add_to(map)
         else:
             fo.Marker(location=(pos_lat, pos_lon), popup=fo.Popup(pos_year)).add_to(map)
-    print(trace["lat"][harb_idx][-1], trace["lon"][harb_idx][-1])
     fo.Circle(location=(trace["lat"][harb_idx][-1], trace["lon"][harb_idx][-1]), radius=5e3)
 
     map.save("plots/" + trace["name"][harb_idx] + ".html")
